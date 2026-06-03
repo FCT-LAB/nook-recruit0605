@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>トリマー求人 | トリミングサロン nook（ヌック）</title>
+<meta name="description" content="トリマーとして長く働きたい方へ。犬よし・飼い主よし・トリマーよし。三方よしを本気で実現する、小さくて誠実なトリミングサロンです。">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --cream-dark: #ede6d6;
+    --sand: #d4c5a9;
+    --bark: #8b6f47;
+    --bark-dark: #6b5235;
+    --moss: #7a8c6e;
+    --charcoal: #2c2825;
+    --charcoal-light: #4a433c;
+    --warm-white: #faf8f4;
+    --divider: #e0d8cc;
+    --text-main: #2c2825;
+    --text-sub: #6b5235;
+    --text-muted: #8a7d6e;
+    --font-ja: "游ゴシック体", "Yu Gothic", "游ゴシック", YuGothic, system-ui, sans-serif;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-ja);
+    background: var(--warm-white);
+    color: var(--text-main);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.9;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── HERO ─────────────────────────────────────── */
+  .hero {
+    position: relative;
+    height: 100svh;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(30,22,14,0.15) 0%, rgba(30,22,14,0.62) 100%),
+      url('https://placehold.co/800x1000/a8917a/f5f0e8?text=Trimming+Scene') center/cover no-repeat;
+    transform: scale(1.04);
+    animation: slowzoom 14s ease-out forwards;
+  }
+
+  @keyframes slowzoom {
+    from { transform: scale(1.04); }
+    to   { transform: scale(1.00); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 48px 28px 52px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeup 1.1s 0.5s ease forwards;
+  }
+
+  @keyframes fadeup {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-size: clamp(26px, 6.5vw, 42px);
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 36px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: #fff;
+    color: var(--bark-dark);
+    font-family: var(--font-ja);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 16px 36px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s;
+  }
+
+  .btn-primary:hover {
+    background: var(--cream);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.55);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .hero-scroll-line {
+    width: 1px;
+    height: 44px;
+    background: rgba(255,255,255,0.4);
+    animation: scrollline 2s ease-in-out infinite;
+    transform-origin: top;
+  }
+
+  @keyframes scrollline {
+    0%   { transform: scaleY(0); opacity: 0; }
+    40%  { transform: scaleY(1); opacity: 1; }
+    100% { transform: scaleY(1); opacity: 0; }
+  }
+
+  /* ─── LAYOUT ─────────────────────────────────────── */
+  .section {
+    padding: 80px 28px;
+  }
+
+  .section + .section {
+    border-top: 1px solid var(--divider);
+  }
+
+  .section-alt {
+    background: var(--cream);
+  }
+
+  .section-dark {
+    background: var(--charcoal);
+    color: #fff;
+  }
+
+  .inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .label {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    font-weight: 600;
+    color: var(--bark);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .label-light {
+    color: rgba(255,255,255,0.5);
+  }
+
+  h2 {
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: 500;
+    line-height: 1.55;
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+    color: var(--charcoal);
+  }
+
+  .section-dark h2 {
+    color: #fff;
+  }
+
+  .lead {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--charcoal-light);
+    margin-bottom: 24px;
+  }
+
+  .section-dark .lead {
+    color: rgba(255,255,255,0.75);
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--charcoal-light);
+    margin-bottom: 16px;
+  }
+
+  .section-dark p {
+    color: rgba(255,255,255,0.72);
+  }
+
+  /* ─── INTRO ─────────────────────────────────────── */
+  .intro-verse {
+    font-size: 16px;
+    line-height: 2.4;
+    color: var(--charcoal);
+    margin-bottom: 32px;
+    border-left: 2px solid var(--sand);
+    padding-left: 20px;
+  }
+
+  /* ─── PHILOSOPHY ─────────────────────────────────── */
+  .philosophy-quote {
+    font-size: clamp(18px, 4.5vw, 26px);
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    color: var(--charcoal);
+    margin-bottom: 32px;
+    padding: 32px 0;
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .three-way {
+    display: flex;
+    gap: 0;
+    margin: 32px 0;
+  }
+
+  .three-way-item {
+    flex: 1;
+    text-align: center;
+    padding: 24px 8px;
+    background: var(--cream-dark);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--bark-dark);
+    position: relative;
+  }
+
+  .three-way-item + .three-way-item {
+    border-left: 1px solid var(--sand);
+  }
+
+  .three-way-item span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  /* ─── WORK FEATURES ─────────────────────────────── */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .card {
+    background: var(--warm-white);
+    padding: 24px 18px;
+    border: 1px solid var(--divider);
+  }
+
+  .card-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+
+  .card-body {
+    font-size: 12px;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .card-wide {
+    grid-column: 1 / -1;
+  }
+
+  /* ─── SITE IMAGE ─────────────────────────────────── */
+  .img-block {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    background: var(--sand);
+  }
+
+  .img-caption {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  /* ─── FIT SECTION ─────────────────────────────────── */
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 32px;
+  }
+
+  .fit-col {
+    padding: 28px 20px;
+  }
+
+  .fit-col-yes {
+    background: var(--moss);
+    color: #fff;
+  }
+
+  .fit-col-no {
+    background: var(--charcoal-light);
+    color: rgba(255,255,255,0.8);
+  }
+
+  .fit-col-title {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    font-weight: 600;
+    margin-bottom: 18px;
+    opacity: 0.8;
+    text-transform: uppercase;
+  }
+
+  .fit-list {
+    list-style: none;
+    font-size: 13px;
+    line-height: 2;
+    padding: 0;
+  }
+
+  .fit-list li::before {
+    content: '— ';
+    opacity: 0.5;
+  }
+
+  /* ─── TABLE ─────────────────────────────────────── */
+  .recruit-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 28px;
+  }
+
+  .recruit-table tr {
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .recruit-table th {
+    width: 36%;
+    padding: 18px 0 18px 0;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--bark);
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .recruit-table td {
+    padding: 18px 0;
+    color: var(--charcoal-light);
+    line-height: 1.75;
+    vertical-align: top;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--moss);
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    padding: 2px 8px;
+    margin-top: 4px;
+  }
+
+  /* ─── MESSAGE ─────────────────────────────────────── */
+  .message-block {
+    border-left: 2px solid rgba(255,255,255,0.25);
+    padding-left: 24px;
+    margin: 28px 0;
+  }
+
+  .message-block p {
+    font-size: 15px;
+    line-height: 2.1;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 12px;
+  }
+
+  .signature {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.45);
+    margin-top: 24px;
+  }
+
+  /* ─── CTA ─────────────────────────────────────────── */
+  .cta-section {
+    background: var(--cream);
+    padding: 80px 28px;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+
+  .cta-section .lead {
+    font-size: 14px;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .btn-apply {
+    display: inline-block;
+    background: var(--bark-dark);
+    color: #fff;
+    font-family: var(--font-ja);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    padding: 20px 48px;
+    text-decoration: none;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+
+  .btn-apply:hover {
+    background: var(--charcoal);
+  }
+
+  .btn-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #06C755;
+    color: #fff;
+    font-family: var(--font-ja);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 20px 48px;
+    text-decoration: none;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .btn-line:hover {
+    background: #05b34c;
+  }
+
+  .btn-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+  }
+
+  /* ─── FOOTER ─────────────────────────────────────── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 32px 28px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+
+  footer strong {
+    color: rgba(255,255,255,0.7);
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  /* ─── DIVIDER ─────────────────────────────────────── */
+  .ornament {
+    text-align: center;
+    color: var(--sand);
+    letter-spacing: 0.3em;
+    font-size: 12px;
+    margin: 8px 0;
+  }
+
+  /* ─── STICKY NAV ─────────────────────────────────── */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bark-dark);
+    padding: 14px 28px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+  }
+
+  .sticky-cta.visible {
+    transform: translateY(0);
+  }
+
+  .sticky-cta-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.1em;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sticky-btn {
+    display: inline-block;
+    background: #fff;
+    color: var(--bark-dark);
+    font-family: var(--font-ja);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 11px 22px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ─── HIGHLIGHT ─────────────────────────────────── */
+  .highlight {
+    color: var(--bark);
+    font-weight: 600;
+  }
+
+  .section-dark .highlight {
+    color: var(--sand);
+  }
+
+  /* ─── EDUCATION ─────────────────────────────────── */
+  .steps {
+    margin-top: 28px;
+    counter-reset: step;
+  }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--divider);
+    align-items: flex-start;
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  .step-num {
+    width: 36px;
+    height: 36px;
+    background: var(--cream-dark);
+    border: 1px solid var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bark);
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+    counter-increment: step;
+  }
+
+  .step-text {
+    flex: 1;
+  }
+
+  .step-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--charcoal);
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  .step-body {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  /* ─── ANIMATION UTILITIES ────────────────────────── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+  HERO
+════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Grooming Salon nook — Recruit</span>
+    <h1 class="hero-title">
+      トリマーとして、<br>長く働きたい方へ。
+    </h1>
+    <p class="hero-sub">犬よし　飼い主よし　トリマーよし</p>
+    <a href="#cta" class="btn-primary">まずは話を聞く</a>
+  </div>
+  <div class="hero-scroll">
+    <span class="hero-scroll-line"></span>
+    <span>scroll</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  INTRO
+════════════════════════════════════════ -->
+<section class="section fade-in">
+  <div class="inner">
+    <span class="label">問いかけ</span>
+    <h2>こんな働き方に、<br>違和感を感じたことはありますか。</h2>
+
+    <div class="intro-verse">
+      犬が好きで始めた仕事。<br>
+      トリミングが好きで続けてきた仕事。<br><br>
+      だけど気づけば、<br>
+      頭数に追われる毎日。<br>
+      休憩を取ることも難しい。<br>
+      身体は痛い。<br>
+      心にも余裕がない。
+    </div>
+
+    <p>トリミング業界には、こうした「当たり前」が積み重なっています。多くのトリマーが、それを疑問に思いながらも、環境を変えることができずにいます。</p>
+    <p>nookは、その「当たり前」に疑問を持つところから始まりました。</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  PHILOSOPHY
+════════════════════════════════════════ -->
+<section class="section section-alt fade-in">
+  <div class="inner">
+    <span class="label">理念</span>
+
+    <p class="philosophy-quote">
+      「犬の幸せを増やすことで、<br>人の暮らしを豊かにする。」
+    </p>
+
+    <p>nookが掲げるのは、<span class="highlight">三方よし</span>の実現です。</p>
+
+    <div class="three-way">
+      <div class="three-way-item">犬<span>happy dogs</span></div>
+      <div class="three-way-item">飼い主<span>happy owners</span></div>
+      <div class="three-way-item">トリマー<span>happy groomers</span></div>
+    </div>
+
+    <p>犬だけが我慢する。飼い主さんだけが満足する。トリマーだけが犠牲になる。私たちは、そのどれも目指していません。</p>
+    <p>三者が持続可能であることを、経営の軸に置いています。</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  WORK FEATURES
+════════════════════════════════════════ -->
+<section class="section fade-in">
+  <div class="inner">
+    <span class="label">働き方</span>
+    <h2>「どれだけ良い体験を<br>提供できるか」を大切にする。</h2>
+    <p>頭数をこなすことを目的にしていません。だからこそ、こんな環境をつくれています。</p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="card-icon">🐾</span>
+        <div class="card-title">1日2〜3頭</div>
+        <p class="card-body">犬の様子を見ながら、無理のないペースで。流れ作業にはしない。</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📅</span>
+        <div class="card-title">日・月曜 定休</div>
+        <p class="card-body">週2日の連休。身体と心を整えるための時間を大切に。</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🌿</span>
+        <div class="card-title">年末年始 6日間</div>
+        <p class="card-body">長期休暇を設けています。家族との時間も、仕事のうち。</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">✅</span>
+        <div class="card-title">有給消化率 100%</div>
+        <p class="card-body">2026年5月現在。パートスタッフにも法定通り付与しています。</p>
+      </div>
+      <div class="card card-wide">
+        <span class="card-icon">👤</span>
+        <div class="card-title">現役トリマーによる経営</div>
+        <p class="card-body">経営者は今も現場に立ち、犬と向き合っています。現場を知らないまま数字だけで判断する経営はしません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  SITE IMAGE
+════════════════════════════════════════ -->
+<div>
+  <img
+    class="img-block"
+    src="https://placehold.co/800x600/c4b49a/f5f0e8?text=nook+Interior"
+    alt="nookのサロン内観"
+  >
+  <div style="padding: 0 28px;">
+    <p class="img-caption">トリミングサロン nook — 静かで、清潔な空間。</p>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+  ABOUT FLOOR
+════════════════════════════════════════ -->
+<section class="section section-dark fade-in">
+  <div class="inner">
+    <span class="label label-light">現場について</span>
+    <h2>経営者がトリマーである、<br>ということ。</h2>
+
+    <div class="message-block">
+      <p>私自身、以前は頭数を追う働き方をしていました。ですが、その先にあったのは余裕のなさでした。</p>
+      <p>犬を見る時間が減る。飼い主さんと向き合う時間が減る。そしてトリマー自身も疲弊していく。</p>
+      <p>今も現場に立っているのは、現場の大変さを忘れないためでもあります。身体への負担も、犬と向き合う難しさも、同じ目線で感じていたい。</p>
+      <p>だからこそ、<span class="highlight">トリマーがトリミングに集中できる環境をつくること</span>が、経営の大切な役割だと考えています。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  EDUCATION
+════════════════════════════════════════ -->
+<section class="section fade-in">
+  <div class="inner">
+    <span class="label">教育・サポート</span>
+    <h2>段階的に、無理なく。</h2>
+    <p>入社直後から一人で任せることはしません。nookの考え方を理解しながら、丁寧にステップを踏んでいきます。</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-text">
+          <div class="step-title">先輩トリマーと勤務スタート</div>
+          <p class="step-body">まずはnookのトリミング方針や犬への向き合い方を、一緒に働きながら学んでいただきます。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-text">
+          <div class="step-title">安心できるようになってから独り立ち</div>
+          <p class="step-body">「任せられる」と判断できた段階で、一人での勤務をお願いします。焦らせることはしません。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-text">
+          <div class="step-title">報連相を大切に</div>
+          <p class="step-body">わからないことはいつでも相談してください。質問しやすい雰囲気を、意識してつくっています。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  FIT / NOT FIT
+════════════════════════════════════════ -->
+<section class="section section-alt fade-in">
+  <div class="inner">
+    <span class="label">こんな方に向いています</span>
+    <h2>価値観が合う方と<br>一緒に働きたい。</h2>
+    <p>採用は「選別」です。たくさん来てほしいのではなく、nookの考え方に共感できる方に来てほしいと思っています。</p>
+  </div>
+
+  <div style="max-width: 640px; margin: 28px auto 0;">
+    <div class="fit-grid">
+      <div class="fit-col fit-col-yes">
+        <div class="fit-col-title">向いている</div>
+        <ul class="fit-list">
+          <li>犬の気持ちを大切にしたい</li>
+          <li>流れ作業に違和感がある</li>
+          <li>飼い主との関係を大切にしたい</li>
+          <li>長くトリマーを続けたい</li>
+          <li>チームで働くことが好き</li>
+          <li>素直に学ぶ姿勢がある</li>
+        </ul>
+      </div>
+      <div class="fit-col fit-col-no">
+        <div class="fit-col-title">向いていない</div>
+        <ul class="fit-list">
+          <li>将来的に独立を考えている</li>
+          <li>とにかく頭数をこなしたい</li>
+          <li>給与・条件だけで選びたい</li>
+          <li>報連相が苦手</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  RECRUIT TABLE
+════════════════════════════════════════ -->
+<section class="section fade-in">
+  <div class="inner">
+    <span class="label">募集要項</span>
+    <h2>募集要項</h2>
+
+    <table class="recruit-table">
+      <tr>
+        <th>募集職種</th>
+        <td>トリマー（パート）</td>
+      </tr>
+      <tr>
+        <th>時給</th>
+        <td>
+          1,250円〜<br>
+          <span style="font-size:12px; color: var(--text-muted);">経験・技術を考慮します</span>
+        </td>
+      </tr>
+      <tr>
+        <th>勤務時間</th>
+        <td>
+          11:00〜18:00<br>
+          <span style="font-size:12px; color: var(--text-muted);">休憩1時間</span>
+        </td>
+      </tr>
+      <tr>
+        <th>勤務日数</th>
+        <td>週3日〜</td>
+      </tr>
+      <tr>
+        <th>定休日</th>
+        <td>日曜日・月曜日</td>
+      </tr>
+      <tr>
+        <th>長期休暇</th>
+        <td>年末年始 6日間</td>
+      </tr>
+      <tr>
+        <th>有給休暇</th>
+        <td>
+          法定通り付与<br>
+          <span class="badge">消化率 100%（2026年5月現在）</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  REPRESENTATIVE MESSAGE
+════════════════════════════════════════ -->
+<section class="section section-dark fade-in">
+  <div class="inner">
+    <span class="label label-light">代表メッセージ</span>
+    <h2>最後に。</h2>
+
+    <div class="message-block">
+      <p>私たちは大きな会社ではありません。高い給与を提示できるわけでもありません。</p>
+      <p>ですが、犬に無理をさせない。飼い主さんとの信頼関係を大切にする。そしてトリマー自身も長く働ける。そんな環境を本気で作りたいと考えています。</p>
+      <p>もしあなたが、「もっと犬と向き合いたい」「トリマーとして長く働きたい」、そう考えているなら、一度お話ししてみませんか。</p>
+      <p>あなたと一緒に働ける日を楽しみにしています。</p>
+    </div>
+
+    <p class="signature">トリミングサロン nook（ヌック）</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  CTA
+════════════════════════════════════════ -->
+<section class="cta-section fade-in" id="cta">
+  <div style="max-width: 480px; margin: 0 auto;">
+    <span class="label">応募・お問い合わせ</span>
+    <h2>まず、話を聞いてみてください。</h2>
+    <p class="lead">面接・選考より前に、一度カジュアルにお話しできます。<br>条件や環境について気軽にご相談ください。</p>
+
+    <div class="cta-buttons">
+      <a href="#" class="btn-apply">応募フォームから送る</a>
+      <a href="#" class="btn-line">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M19.365 9.863c.349 0 .63.285.63.63 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.346 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        LINEで相談する
+      </a>
+    </div>
+
+    <p class="btn-note" style="margin-top: 20px;">選考前の質問・見学のご希望もお気軽にどうぞ。</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+  FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <strong>Grooming Salon nook</strong>
+  トリミングサロン nook（ヌック）<br>
+  &copy; 2026 nook. All rights reserved.
+</footer>
+
+
+<!-- ════════════════════════════════════════
+  STICKY CTA BAR
+════════════════════════════════════════ -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="sticky-cta-text">トリマー（パート）募集中</span>
+  <a href="#cta" class="sticky-btn">応募する</a>
+</div>
+
+
+<!-- ════════════════════════════════════════
+  JS — Scroll animations & sticky CTA
+════════════════════════════════════════ -->
+<script>
+  // Fade-in on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // Sticky CTA — show after scrolling past hero
+  const hero = document.querySelector('.hero');
+  const stickyCta = document.getElementById('stickyCta');
+  const stickyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      stickyCta.classList.toggle('visible', !e.isIntersecting);
+    });
+  }, { threshold: 0 });
+  stickyObserver.observe(hero);
+</script>
+
+</body>
+</html>
